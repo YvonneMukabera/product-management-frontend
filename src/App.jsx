@@ -1,9 +1,11 @@
+ import Welcome from './components/welcome';
+ 
  function App() {
   return (
     <div>
-      <h1>Welcome to Product Management System</h1>
-      <p>This is a system for managing products.</p>
+      <Welcome />
     </div>
   );
  }
 export default App;
+  
