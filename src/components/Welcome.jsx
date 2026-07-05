@@ -1,8 +1,9 @@
 function Welcome() {
+    const title="Welcome to Product Management System";
   return (
     <div>
-      <h1>Welcome to Product Management System</h1>
-        <p>This is a system for managing products.</p>
+      <h1>{title}</h1>
+        <p>This is a system that will help you to manage your products.</p>
     </div>
   );
 }
