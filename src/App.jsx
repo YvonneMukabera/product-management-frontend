@@ -7,6 +7,21 @@
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [category, setCategory] = useState("");
+  //to handle form submission
+  const handleSubmit = () => {
+    if (!name || !price || !quantity || !category) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    // Here you can handle the form submission, e.g., send data to a server or update state
+    console.log("Product Details:", { name, price, quantity, category });
+    alert("Product details saved successfully!");
+    // Reset form fields after submission
+    setName("");
+    setPrice("");
+    setQuantity("");
+    setCategory("");
+  };
   return (
     <div>
       <h1>{title}</h1>
@@ -41,6 +56,8 @@
       <p><strong>Price:</strong> ${price}</p>
       <p><strong>Quantity:</strong> {quantity}</p>
       <p><strong>Category:</strong> {category}</p>
+      <br />
+      <button onClick={handleSubmit}>Save Product</button>
     </div>
   );
  }
